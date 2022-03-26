@@ -62,14 +62,14 @@ async function main() {
     let actionList = []
     let POOL_ID= 465
 
-    let argu = {
+    let args= {
         pool_id: POOL_ID,
         token_in: "wrap.testnet",
         amount_in: MONTO,
         token_out: "usdc.fakes.testnet",
     }
 
-    let min  = await near.NearView("exchange.ref-dev.testnet", "get_return", argu );
+    let min  = await near.NearView("exchange.ref-dev.testnet", "get_return", args);
 
 
     actionList.push({
